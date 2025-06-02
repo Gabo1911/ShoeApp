@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F5"
+    android:id="@+id/main"
+    tools:context=".HomePageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingHorizontal="16dp">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_arrow_back"
+                android:contentDescription="Back"/>
+
+            <ImageButton
+                android:id="@+id/btnCart"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_shoping_cart"
+                android:scaleType="centerCrop"
+                android:contentDescription="Cart"/>
+        </RelativeLayout>
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerInside"
+            android:padding="24dp"
+            android:src="@drawable/img_sneaker"
+            android:contentDescription="Product image"/>
+
+        <!-- Product Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/brandLogo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/nike"
+                    android:contentDescription="Brand logo"/>
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="Air Max 200 SE"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvProductRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(4.8 ★)"
+                    android:textColor="#666666"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Air Max 200 SE is an American brand of basketball shoes, athletic and style clothing produced by Nike. Designed for Nike by Peter Moore"
+                android:textColor="#666666"
+                android:lineSpacingExtra="4dp"/>
+
+            <TextView
+                android:id="@+id/tvProductStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Available: 50"
+                android:textSize="16sp"
+                android:textColor="@android:color/holo_green_dark"/>
+
+            <!-- Size Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Size"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/sizeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnSize8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="8"
+                    android:background="@drawable/size_button_selector"
+                    android:textColor="@android:color/black"/>
+
+                <Button
+                    android:id="@+id/btnSize8_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="8.5"
+                    android:background="@drawable/size_button_selector"
+                    android:textColor="@android:color/black"/>
+
+                <Button
+                    android:id="@+id/btnSize9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="9"
+                    android:background="@drawable/size_button_selector"
+                    android:textColor="@android:color/black"/>
+
+                <Button
+                    android:id="@+id/btnSize9_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="9.5"
+                    android:background="@drawable/size_button_selector"
+                    android:textColor="@android:color/black"/>
+
+                <Button
+                    android:id="@+id/btnSize10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:background="@drawable/size_button_selector"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+
+            <!-- Color Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Color"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/colorContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!-- Add padding to ImageViews if color_circle_selected border is clipped -->
+                    <ImageView
+                        android:id="@+id/colorPink"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/color_circle"
+                        android:backgroundTint="#EFCECE"
+                        android:contentDescription="Pink Color"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="3dp"/> <!-- Add padding -->
+
+                    <ImageView
+                        android:id="@+id/colorBlack"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/color_circle"
+                        android:backgroundTint="#000000"
+                        android:contentDescription="Black Color"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="3dp"/> <!-- Add padding -->
+
+                    <ImageView
+                        android:id="@+id/colorLightBlue"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/color_circle"
+                        android:backgroundTint="#E5E5FF"
+                        android:contentDescription="Light Blue Color"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="3dp"/> <!-- Add padding -->
+
+                    <ImageView
+                        android:id="@+id/colorBlue"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/color_circle"
+                        android:backgroundTint="#7CB9E8"
+                        android:contentDescription="Blue Color"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="3dp"/> <!-- Add padding -->
+
+                    <ImageView
+                        android:id="@+id/colorYellow"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/color_circle"
+                        android:backgroundTint="#F0E68C"
+                        android:contentDescription="Yellow Color"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="3dp"/> <!-- Add padding -->
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Quantity Selector -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:id="@+id/btnDecrementQuantity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_menu_add"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Decrement Quantity"/>
+
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="18sp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"/>
+
+                <ImageButton
+                    android:id="@+id/btnIncrementQuantity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_menu_minus"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Increment Quantity"/>
+            </LinearLayout>
+
+
+            <!-- Price and Add to Cart -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₱25.99"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+                <Button
+                    android:id="@+id/btnAddToCart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="24dp"
+                    android:text="Add to Cart"
+                    android:textAllCaps="false"
+                    android:padding="12dp"
+                    app:cornerRadius="24dp"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#FF6B6B"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
